@@ -26,6 +26,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
       <script src="/register-sw.js" />
+      <link rel="manifest" href="/manifest.json" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}

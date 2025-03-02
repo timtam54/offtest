@@ -1,7 +1,10 @@
 const cacheName = "my-cool-cache-v1";
 const filesToCache = [
   "/",
-  // etc
+  "/next.svg",
+   "/logo192.png",
+  "/logo512.png",
+  "/manifest.json"
 ];
 
 const installEvent = () => {
