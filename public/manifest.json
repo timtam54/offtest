@@ -1,11 +1,10 @@
 {
-    "name": "TaskTempo",
-    "short_name": "TaskTempo",
-    "description": "TaskTempo",
-    "start_url": "/",
-    "display": "standalone",
-    "background_color": "white",
-    "theme_color": "#000000",
+  "name": "My PWA App",
+  "short_name": "PWA App",
+  "description": "A progressive web app built with Next.js",
+  "background_color": "#ffffff",
+  "theme_color": "#0070f3",
+  "display": "standalone",
     "icons": [
       {
         "src": "/logo192.png",

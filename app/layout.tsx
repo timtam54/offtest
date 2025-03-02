@@ -25,7 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-      <script src="/register-sw.js" />
+     
       <link rel="manifest" href="/manifest.json" />
       </head>
       <body

@@ -4,18 +4,19 @@ import { useEffect } from "react";
 
 export default function Home() {
 
-  useEffect(() => {
-    // Load initial items
-    // Register service worker
-    if ("serviceWorker" in navigator) {
-      navigator.serviceWorker
-        .register("/sw.js")
-        .then((registration) => console.log("SW registered:", registration))
-        .catch((error) => console.log("SW registration failed:", error))
-    }
 
-    
+
+  useEffect(() => {
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js')
+          .then(reg => console.log('Service worker registered.', reg))
+          .catch(err => console.log('Service worker registration failed:', err));
+      });
+    }
   }, [])
+
+ 
 
 
   return (
