@@ -1,14 +1,24 @@
-// next.config.js
-const withPWA = require('next-pwa')({
-    dest: 'public', // where the service worker is generated
-    register: true, // register the service worker
-    skipWaiting: true, // activate new service workers immediately
-    fallbacks: {
-      // Failed page requests fallback to this.
-      document: "/",
-    }
-  });
-  
-  module.exports = withPWA({
-    reactStrictMode: true,
-  });
+const withPWA = require("@ducanh2912/next-pwa").default({
+  cacheOnFrontEndNav: true,
+  aggressiveFrontEndNavCaching: true,
+  reloadOnOnline: true,
+  swcMinify: true,
+  dest: "public",
+  fallbacks: {
+    //image: "/static/images/fallback.png",
+    document: "/offline", // if you want to fallback to a custom page rather than /_offline
+    // font: '/static/font/fallback.woff2',
+    // audio: ...,
+    // video: ...,
+  },
+  workboxOptions: {
+    disableDevLogs: true,
+  },
+  // ... other options you like
+});
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  // ... other options you like
+};
+
+module.exports = withPWA(nextConfig);
